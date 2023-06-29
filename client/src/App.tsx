@@ -1,24 +1,14 @@
-import React, { useEffect, useState } from 'react';
 import './App.css';
+import './styles/Global.css';
+import Intro from './components/Intro';
 
 function App() {
 
-  const [data, setData] = useState([{}])
-
-  useEffect(() => {
-    fetch("/experience").then(
-      res => res.json()
-    ).then(
-      data => {
-        setData(data)
-        console.log(data)
-      }
-    )
-  }, [])
-
   return (
     <div className="App">
-      
+      <div id="content">
+        <Intro></Intro>
+      </div>
     </div>
   );
 }
